@@ -12,15 +12,11 @@ namespace Philips_Hardware__Inventory_System
     using System;
     using System.Collections.Generic;
     
-    public partial class Inventory
+    public partial class Supplier
     {
-        public int invenid { get; set; }
-        public string item { get; set; }
-        public int Quality { get; set; }
-        public Nullable<int> supplierid { get; set; }
-        public Nullable<decimal> cost { get; set; }
-        public Nullable<decimal> price { get; set; }
+        public int id { get; set; }
+        public string Supplier_Name { get; set; }
     
-        public virtual Supplier Supplier { get; set; }
+        public virtual Inventory Inventory { get; set; }
     }
 }

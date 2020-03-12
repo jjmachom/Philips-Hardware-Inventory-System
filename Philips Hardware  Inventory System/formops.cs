@@ -81,10 +81,12 @@ namespace Philips_Hardware__Inventory_System
         }
         public void ShowDashForm()
         {
-
+            users user1 = new users();
             Dashboard das = new Dashboard();
 
             das.Show();
+
+            das.setlabel(user1.getusername());
 
             
         }

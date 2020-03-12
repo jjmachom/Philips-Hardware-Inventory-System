@@ -12,6 +12,7 @@ namespace Philips_Hardware__Inventory_System
 {
     public partial class Dashboard : Form
     {
+        users user1 = new users();
 
         formops ops = new formops();
         public Dashboard()
@@ -49,6 +50,24 @@ namespace Philips_Hardware__Inventory_System
         private void btn_report_Click(object sender, EventArgs e)
         {
             ops.ReportsForm(this);
+        }
+
+        private void user_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void setlabel(string username_)
+        {
+
+            user_lbl.Text = username_;
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            
+            setlabel(user1.getusername());
         }
     }
 }

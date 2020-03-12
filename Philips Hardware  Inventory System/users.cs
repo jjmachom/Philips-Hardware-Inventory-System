@@ -23,7 +23,7 @@ namespace Philips_Hardware__Inventory_System
         public void setUsername(string usern)
         {
 
-            this.username = usern;
+            username = usern;
 
 
         }

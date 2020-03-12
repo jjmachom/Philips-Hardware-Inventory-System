@@ -12,10 +12,13 @@ namespace Philips_Hardware__Inventory_System
 {
     public partial class Login : Form
     {
+       
         public Login()
         {
             InitializeComponent();
         }
+
+        users u1 = new users();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -24,11 +27,15 @@ namespace Philips_Hardware__Inventory_System
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            users u1 = new users();
+            
 
             u1.showDash(username.Text, pass.Text,this);
+            u1.setUsername(username.Text);
+
             
         }
+
+        
     }
 
 
