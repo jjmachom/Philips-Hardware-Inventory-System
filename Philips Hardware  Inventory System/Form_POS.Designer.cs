@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.lname = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btn_client = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_total = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -244,16 +244,16 @@
             this.lname.Size = new System.Drawing.Size(176, 20);
             this.lname.TabIndex = 13;
             // 
-            // button14
+            // btn_client
             // 
-            this.button14.Font = new System.Drawing.Font("Rockwell Extra Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(835, 66);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(100, 64);
-            this.button14.TabIndex = 12;
-            this.button14.Text = "Add Client";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.btn_client.Font = new System.Drawing.Font("Rockwell Extra Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_client.Location = new System.Drawing.Point(835, 66);
+            this.btn_client.Name = "btn_client";
+            this.btn_client.Size = new System.Drawing.Size(100, 64);
+            this.btn_client.TabIndex = 12;
+            this.btn_client.Text = "Add Client";
+            this.btn_client.UseVisualStyleBackColor = true;
+            this.btn_client.Click += new System.EventHandler(this.button14_Click);
             // 
             // label3
             // 
@@ -293,7 +293,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_total);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button14);
+            this.Controls.Add(this.btn_client);
             this.Controls.Add(this.lname);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.label2);
@@ -332,7 +332,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.TextBox lname;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btn_client;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_total;
         private System.Windows.Forms.Label label1;

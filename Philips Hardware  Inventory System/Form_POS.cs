@@ -49,15 +49,28 @@ namespace Philips_Hardware__Inventory_System
 
         private void button14_Click(object sender, EventArgs e)
         {
-            var customer_data = new Customer();
-            customer_data.First_Name = fname.Text;
 
-            customer_data.Last_Name = lname.Text;
+            var condition1 = fname;
 
-            hardware_d.Customers.Add(customer_data);
-            hardware_d.SaveChanges();
+            if (condition1.Text !="")
+            {
+                var customer_data = new Customer();
+                customer_data.First_Name = fname.Text;
 
-            loadcus();
+                customer_data.Last_Name = lname.Text;
+
+                hardware_d.Customers.Add(customer_data);
+                hardware_d.SaveChanges();
+
+                loadcus();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Customer Field cannot be empty!");
+            }
+            
         }
     }
 }

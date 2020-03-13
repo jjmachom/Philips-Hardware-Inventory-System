@@ -122,6 +122,11 @@
       <DependentUpon>hardware.edmx</DependentUpon>
     </Compile>
     <Compile Include="hardware_db.cs" />
+    <Compile Include="hardware_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inventory.cs">
       <DependentUpon>hardware.tt</DependentUpon>
     </Compile>
@@ -176,6 +181,17 @@
     </EntityDeploy>
     <None Include="hardware.edmx.diagram">
       <DependentUpon>hardware.edmx</DependentUpon>
+    </None>
+    <None Include="hardware_dbDataSet.xsc">
+      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hardware_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hardware_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hardware_dbDataSet.xss">
+      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

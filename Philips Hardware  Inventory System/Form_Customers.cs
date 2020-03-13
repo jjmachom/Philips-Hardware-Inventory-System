@@ -24,5 +24,17 @@ namespace Philips_Hardware__Inventory_System
         {
             ops.ShowDashForm();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_Customers_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hardware_dbDataSet.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.hardware_dbDataSet.Customer);
+            
+        }
     }
 }
