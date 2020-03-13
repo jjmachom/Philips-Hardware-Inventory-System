@@ -36,7 +36,9 @@ namespace Philips_Hardware__Inventory_System
         }
 
         private void Form_POS_Load(object sender, EventArgs e)
-        {
+        { 
+            //reload Combo box data
+
             loadcus();
             
             
