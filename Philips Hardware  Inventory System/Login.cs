@@ -12,13 +12,14 @@ namespace Philips_Hardware__Inventory_System
 {
     public partial class Login : Form
     {
-       
+        users u1;
         public Login()
         {
+            u1 = new users();
             InitializeComponent();
         }
 
-        users u1 = new users();
+      
 
         private void label1_Click(object sender, EventArgs e)
         {
