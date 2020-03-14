@@ -23,5 +23,22 @@ namespace Philips_Hardware__Inventory_System
         {
             ops.ShowDashForm();
         }
+
+        private void Form_Employees_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hardware_dbDataSet1.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.hardware_dbDataSet1.Employee);
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

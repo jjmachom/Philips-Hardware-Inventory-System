@@ -122,10 +122,18 @@
       <DependentUpon>hardware.edmx</DependentUpon>
     </Compile>
     <Compile Include="hardware_db.cs" />
+    <Compile Include="hardware_dbDataSet.cs">
+      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hardware_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hardware_dbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hardware_dbDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs">
       <DependentUpon>hardware.tt</DependentUpon>
@@ -192,6 +200,17 @@
     </None>
     <None Include="hardware_dbDataSet.xss">
       <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hardware_dbDataSet1.xsc">
+      <DependentUpon>hardware_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hardware_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hardware_dbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hardware_dbDataSet1.xss">
+      <DependentUpon>hardware_dbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
