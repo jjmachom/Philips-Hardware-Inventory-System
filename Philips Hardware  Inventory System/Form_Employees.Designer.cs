@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fname_txt = new System.Windows.Forms.TextBox();
+            this.employeedatagrid = new System.Windows.Forms.DataGridView();
             this.hardware_dbDataSet1 = new Philips_Hardware__Inventory_System.hardware_dbDataSet1();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new Philips_Hardware__Inventory_System.hardware_dbDataSet1TableAdapters.EmployeeTableAdapter();
@@ -42,34 +42,34 @@
             this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fname_lb = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lname_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.username_txt = new System.Windows.Forms.TextBox();
+            this.pass_txt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.user_stat = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.employeedatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // fname_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 277);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 20);
-            this.textBox1.TabIndex = 0;
+            this.fname_txt.Location = new System.Drawing.Point(56, 277);
+            this.fname_txt.Name = "fname_txt";
+            this.fname_txt.Size = new System.Drawing.Size(214, 20);
+            this.fname_txt.TabIndex = 0;
             // 
-            // dataGridView1
+            // employeedatagrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employeedatagrid.AllowUserToAddRows = false;
+            this.employeedatagrid.AllowUserToDeleteRows = false;
+            this.employeedatagrid.AutoGenerateColumns = false;
+            this.employeedatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeedatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.empidDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
@@ -77,12 +77,13 @@
             this.passwordDataGridViewTextBoxColumn,
             this.levelDataGridViewTextBoxColumn,
             this.activeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.employeeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.employeedatagrid.DataSource = this.employeeBindingSource;
+            this.employeedatagrid.Location = new System.Drawing.Point(56, 31);
+            this.employeedatagrid.Name = "employeedatagrid";
+            this.employeedatagrid.ReadOnly = true;
+            this.employeedatagrid.Size = new System.Drawing.Size(742, 150);
+            this.employeedatagrid.TabIndex = 1;
+            this.employeedatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // hardware_dbDataSet1
             // 
@@ -156,12 +157,12 @@
             this.fname_lb.TabIndex = 2;
             this.fname_lb.Text = "First Name";
             // 
-            // textBox2
+            // lname_txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(56, 347);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 20);
-            this.textBox2.TabIndex = 3;
+            this.lname_txt.Location = new System.Drawing.Point(56, 347);
+            this.lname_txt.Name = "lname_txt";
+            this.lname_txt.Size = new System.Drawing.Size(214, 20);
+            this.lname_txt.TabIndex = 3;
             // 
             // label2
             // 
@@ -182,20 +183,20 @@
             this.label3.Text = "username";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // username_txt
             // 
-            this.textBox3.Location = new System.Drawing.Point(405, 277);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(214, 20);
-            this.textBox3.TabIndex = 6;
+            this.username_txt.Location = new System.Drawing.Point(405, 277);
+            this.username_txt.Name = "username_txt";
+            this.username_txt.Size = new System.Drawing.Size(214, 20);
+            this.username_txt.TabIndex = 6;
             // 
-            // textBox4
+            // pass_txt
             // 
-            this.textBox4.Location = new System.Drawing.Point(405, 347);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(214, 20);
-            this.textBox4.TabIndex = 7;
+            this.pass_txt.Location = new System.Drawing.Point(405, 347);
+            this.pass_txt.Name = "pass_txt";
+            this.pass_txt.PasswordChar = '*';
+            this.pass_txt.Size = new System.Drawing.Size(214, 20);
+            this.pass_txt.TabIndex = 7;
             // 
             // label4
             // 
@@ -215,6 +216,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -225,42 +227,43 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // user_stat
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.user_stat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.user_stat.FormattingEnabled = true;
+            this.user_stat.Items.AddRange(new object[] {
             "Active",
             "Disable"});
-            this.comboBox1.Location = new System.Drawing.Point(405, 387);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.user_stat.Location = new System.Drawing.Point(405, 387);
+            this.user_stat.Name = "user_stat";
+            this.user_stat.Size = new System.Drawing.Size(214, 21);
+            this.user_stat.TabIndex = 11;
+            this.user_stat.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.user_stat);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.pass_txt);
+            this.Controls.Add(this.username_txt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lname_txt);
             this.Controls.Add(this.fname_lb);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.employeedatagrid);
+            this.Controls.Add(this.fname_txt);
             this.Name = "Form_Employees";
             this.Text = "Form_Employees";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Employees_FormClosed);
             this.Load += new System.EventHandler(this.Form_Employees_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeedatagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -270,8 +273,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox fname_txt;
+        private System.Windows.Forms.DataGridView employeedatagrid;
         private hardware_dbDataSet1 hardware_dbDataSet1;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private hardware_dbDataSet1TableAdapters.EmployeeTableAdapter employeeTableAdapter;
@@ -283,14 +286,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn activeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label fname_lb;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox lname_txt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox username_txt;
+        private System.Windows.Forms.TextBox pass_txt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox user_stat;
     }
 }
