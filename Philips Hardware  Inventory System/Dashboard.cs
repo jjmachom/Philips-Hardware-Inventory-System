@@ -66,8 +66,48 @@ namespace Philips_Hardware__Inventory_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
+
             setlabel(user1.getusername());
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.inventoryForm(this);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.employeeForm(this);
+        }
+
+        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.SupplierForm(this);
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.customerForm(this);
+        }
+
+        private void pointOfSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.posForm(this);
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.ReportsForm(this);
         }
     }
 }
