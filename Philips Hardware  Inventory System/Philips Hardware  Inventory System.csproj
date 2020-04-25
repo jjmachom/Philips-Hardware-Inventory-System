@@ -142,6 +142,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HardwareDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HardwareDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardwareDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HardwareDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardwareDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HardwareDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardwareDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hardware_db.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -270,6 +285,39 @@
     <None Include="HardwareDataSet2.xss">
       <DependentUpon>HardwareDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="HardwareDataSet3.xsc">
+      <DependentUpon>HardwareDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HardwareDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HardwareDataSet3.xss">
+      <DependentUpon>HardwareDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet4.xsc">
+      <DependentUpon>HardwareDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HardwareDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HardwareDataSet4.xss">
+      <DependentUpon>HardwareDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet5.xsc">
+      <DependentUpon>HardwareDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HardwareDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HardwareDataSet5.xss">
+      <DependentUpon>HardwareDataSet5.xsd</DependentUpon>
+    </None>
     <None Include="hardware_db.edmx.diagram">
       <DependentUpon>hardware_db.edmx</DependentUpon>
     </None>
@@ -325,6 +373,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Hardwarescript.sql" />
     <None Include="Resources\bk.png" />
     <None Include="Resources\logo-master.png" />
   </ItemGroup>

@@ -28,6 +28,8 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_Suppliers_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hardwareDataSet5.Suppliers' table. You can move, or remove it, as needed.
+            this.suppliersTableAdapter.Fill(this.hardwareDataSet5.Suppliers);
 
         }
     }
