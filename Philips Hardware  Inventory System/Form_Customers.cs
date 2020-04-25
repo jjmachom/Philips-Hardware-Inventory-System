@@ -14,7 +14,7 @@ namespace Philips_Hardware__Inventory_System
     {
         //private readonly hardware_dbEntities1 hardware_d = new hardware_dbEntities1();
 
-        
+        private readonly HardwareEntities1 hardware_d = new HardwareEntities1();
         
         formops ops = new formops();
         public Form_Customers()
@@ -34,9 +34,11 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_Customers_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hardwareDataSet.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.hardwareDataSet.Customers);
             // TODO: This line of code loads data into the 'hardware_dbDataSet.Customer' table. You can move, or remove it, as needed.
             //this.customerTableAdapter.Fill(this.hardware_dbDataSet.Customer);
-            
+
         }
 
         private void btncus_add_Click(object sender, EventArgs e)
@@ -50,8 +52,8 @@ namespace Philips_Hardware__Inventory_System
                 customer_data.Last_Name = lname.Text;
                 customer_data.Telephone = tel.Text;
 
-                //hardware_d.Customers.Add(customer_data);
-                //hardware_d.SaveChanges();
+                hardware_d.Customers.Add(customer_data);
+                hardware_d.SaveChanges();
 
 
                 dataGridView1.Refresh();
@@ -61,6 +63,7 @@ namespace Philips_Hardware__Inventory_System
 
                 MessageBox.Show("Customer Field cannot be empty!");
             }
+            dataGridView1.Refresh();
         }
 
         private void Form_Customers_FormClosing(object sender, FormClosingEventArgs e)

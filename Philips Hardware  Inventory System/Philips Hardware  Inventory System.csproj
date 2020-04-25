@@ -127,6 +127,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hardware.edmx</DependentUpon>
     </Compile>
+    <Compile Include="HardwareDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardwareDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hardware_db.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,6 +227,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>hardware_db.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="HardwareDataSet.xsc">
+      <DependentUpon>HardwareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HardwareDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HardwareDataSet.xss">
+      <DependentUpon>HardwareDataSet.xsd</DependentUpon>
+    </None>
     <None Include="hardware_db.edmx.diagram">
       <DependentUpon>hardware_db.edmx</DependentUpon>
     </None>
