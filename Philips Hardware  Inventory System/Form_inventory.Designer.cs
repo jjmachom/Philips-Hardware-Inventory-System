@@ -28,128 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.hardwareDataSet2 = new Philips_Hardware__Inventory_System.HardwareDataSet2();
+            this.inventoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoriesTableAdapter = new Philips_Hardware__Inventory_System.HardwareDataSet2TableAdapters.InventoriesTableAdapter();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplieridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qualityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invenidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwareDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // hardwareDataSet2
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 351);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(444, 38);
-            this.textBox1.TabIndex = 0;
+            this.hardwareDataSet2.DataSetName = "HardwareDataSet2";
+            this.hardwareDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
+            // inventoriesBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 262);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 46);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Item Name";
+            this.inventoriesBindingSource.DataMember = "Inventories";
+            this.inventoriesBindingSource.DataSource = this.hardwareDataSet2;
             // 
-            // label2
+            // inventoriesTableAdapter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 479);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 46);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Supplier";
+            this.inventoriesTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
+            // priceDataGridViewTextBoxColumn
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(32, 568);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(316, 39);
-            this.comboBox1.TabIndex = 4;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 250;
             // 
-            // textBox2
+            // costDataGridViewTextBoxColumn
             // 
-            this.textBox2.Location = new System.Drawing.Point(32, 749);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 38);
-            this.textBox2.TabIndex = 5;
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.Width = 250;
             // 
-            // label3
+            // supplieridDataGridViewTextBoxColumn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 663);
-            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 46);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Amount";
+            this.supplieridDataGridViewTextBoxColumn.DataPropertyName = "supplierid";
+            this.supplieridDataGridViewTextBoxColumn.HeaderText = "supplierid";
+            this.supplieridDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.supplieridDataGridViewTextBoxColumn.Name = "supplieridDataGridViewTextBoxColumn";
+            this.supplieridDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // qualityDataGridViewTextBoxColumn
+            // 
+            this.qualityDataGridViewTextBoxColumn.DataPropertyName = "Quality";
+            this.qualityDataGridViewTextBoxColumn.HeaderText = "Quality";
+            this.qualityDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.qualityDataGridViewTextBoxColumn.Name = "qualityDataGridViewTextBoxColumn";
+            this.qualityDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // itemDataGridViewTextBoxColumn
+            // 
+            this.itemDataGridViewTextBoxColumn.DataPropertyName = "item";
+            this.itemDataGridViewTextBoxColumn.HeaderText = "item";
+            this.itemDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
+            this.itemDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // invenidDataGridViewTextBoxColumn
+            // 
+            this.invenidDataGridViewTextBoxColumn.DataPropertyName = "invenid";
+            this.invenidDataGridViewTextBoxColumn.HeaderText = "invenid";
+            this.invenidDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.invenidDataGridViewTextBoxColumn.Name = "invenidDataGridViewTextBoxColumn";
+            this.invenidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.invenidDataGridViewTextBoxColumn.Width = 250;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(635, 351);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.invenidDataGridViewTextBoxColumn,
+            this.itemDataGridViewTextBoxColumn,
+            this.qualityDataGridViewTextBoxColumn,
+            this.supplieridDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.inventoriesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(107, 229);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 102;
-            this.dataGridView1.Size = new System.Drawing.Size(1168, 522);
+            this.dataGridView1.Size = new System.Drawing.Size(1607, 816);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(32, 882);
-            this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(379, 86);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Form_inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1877, 1106);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form_inventory";
             this.Text = "Form_inventory";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_inventory_FormClosed);
             this.Load += new System.EventHandler(this.Form_inventory_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.hardwareDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private HardwareDataSet2 hardwareDataSet2;
+        private System.Windows.Forms.BindingSource inventoriesBindingSource;
+        private HardwareDataSet2TableAdapters.InventoriesTableAdapter inventoriesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplieridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qualityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invenidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
     }
 }

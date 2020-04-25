@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HardwareDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HardwareDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardwareDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="hardware_db.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -253,6 +258,17 @@
     </None>
     <None Include="HardwareDataSet1.xss">
       <DependentUpon>HardwareDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet2.xsc">
+      <DependentUpon>HardwareDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HardwareDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HardwareDataSet2.xss">
+      <DependentUpon>HardwareDataSet2.xsd</DependentUpon>
     </None>
     <None Include="hardware_db.edmx.diagram">
       <DependentUpon>hardware_db.edmx</DependentUpon>

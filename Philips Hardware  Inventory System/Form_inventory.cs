@@ -27,6 +27,18 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_inventory_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hardwareDataSet2.Inventories' table. You can move, or remove it, as needed.
+            this.inventoriesTableAdapter.Fill(this.hardwareDataSet2.Inventories);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
