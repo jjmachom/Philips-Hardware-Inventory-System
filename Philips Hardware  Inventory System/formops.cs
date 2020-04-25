@@ -26,7 +26,7 @@ namespace Philips_Hardware__Inventory_System
 
             cus.Show();
 
-            randform.Hide();
+            //randform.Hide();
         }
 
 
@@ -37,7 +37,7 @@ namespace Philips_Hardware__Inventory_System
 
             inven.Show();
 
-            randform.Hide();
+            //randform.Hide();
         }
 
         public void employeeForm(Form randform)
@@ -47,7 +47,7 @@ namespace Philips_Hardware__Inventory_System
 
             em.Show();
 
-            randform.Hide();
+            //randform.Hide();
         }
 
 
@@ -58,7 +58,7 @@ namespace Philips_Hardware__Inventory_System
 
             pos.Show();
 
-            randform.Hide();
+            //randform.Hide();
         }
 
         public void SupplierForm(Form randform)
@@ -68,7 +68,7 @@ namespace Philips_Hardware__Inventory_System
 
             supp.Show();
 
-            randform.Hide();
+            //randform.Hide();
         }
         public void ReportsForm(Form randform)
         {
@@ -77,7 +77,7 @@ namespace Philips_Hardware__Inventory_System
 
             repp.Show();
 
-            randform.Hide();
+            //randform.Hide();
         }
         public void ShowDashForm()
         {

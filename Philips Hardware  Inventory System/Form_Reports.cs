@@ -20,7 +20,12 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_Reports_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ops.ShowDashForm();
+           // ops.ShowDashForm();
+        }
+
+        private void Form_Reports_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

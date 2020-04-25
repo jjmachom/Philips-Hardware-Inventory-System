@@ -21,7 +21,12 @@ namespace Philips_Hardware__Inventory_System
         {
             formops ops = new formops();
 
-            ops.ShowDashForm();
+           // ops.ShowDashForm();
+
+        }
+
+        private void Form_inventory_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -134,6 +134,7 @@
             this.Name = "Form_inventory";
             this.Text = "Form_inventory";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_inventory_FormClosed);
+            this.Load += new System.EventHandler(this.Form_inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

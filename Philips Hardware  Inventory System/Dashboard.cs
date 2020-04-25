@@ -143,5 +143,22 @@ namespace Philips_Hardware__Inventory_System
         {
             ops.customerForm(this);
         }
+
+        private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ops.employeeForm(this);
+        }
+
+        private void suppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ops.SupplierForm(this);
+        }
+
+        private void inventoryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ops.inventoryForm(this);
+
+
+        }
     }
 }

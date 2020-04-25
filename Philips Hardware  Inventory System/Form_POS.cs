@@ -45,7 +45,7 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_POS_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ops.ShowDashForm();
+            //ops.ShowDashForm();
         }
 
         private void button14_Click(object sender, EventArgs e)

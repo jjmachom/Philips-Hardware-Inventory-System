@@ -149,6 +149,7 @@
             this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
             this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(448, 54);
             this.employeeToolStripMenuItem1.Text = "Employee";
+            this.employeeToolStripMenuItem1.Click += new System.EventHandler(this.employeeToolStripMenuItem1_Click);
             // 
             // suppliersToolStripMenuItem
             // 
@@ -156,6 +157,7 @@
             this.suppliersToolStripMenuItem.Name = "suppliersToolStripMenuItem";
             this.suppliersToolStripMenuItem.Size = new System.Drawing.Size(448, 54);
             this.suppliersToolStripMenuItem.Text = "Suppliers";
+            this.suppliersToolStripMenuItem.Click += new System.EventHandler(this.suppliersToolStripMenuItem_Click);
             // 
             // inventoryToolStripMenuItem1
             // 
@@ -163,6 +165,7 @@
             this.inventoryToolStripMenuItem1.Name = "inventoryToolStripMenuItem1";
             this.inventoryToolStripMenuItem1.Size = new System.Drawing.Size(448, 54);
             this.inventoryToolStripMenuItem1.Text = "Inventory";
+            this.inventoryToolStripMenuItem1.Click += new System.EventHandler(this.inventoryToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 

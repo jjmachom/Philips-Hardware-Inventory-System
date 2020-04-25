@@ -24,7 +24,7 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_Customers_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ops.ShowDashForm();
+            //ops.ShowDashForm();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -61,6 +61,11 @@ namespace Philips_Hardware__Inventory_System
 
                 MessageBox.Show("Customer Field cannot be empty!");
             }
+        }
+
+        private void Form_Customers_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }
