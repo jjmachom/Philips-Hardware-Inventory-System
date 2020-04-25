@@ -76,10 +76,15 @@ namespace Philips_Hardware__Inventory_System
 
                 dash.Show();
 
-                login.Hide(); 
+                login.Hide();
 
-                
+                MessageBox.Show("Welcome to Philips Hardware IMS");
 
+            }
+            else
+            {
+
+                MessageBox.Show("Invaild Username or Password entered!!");
             }
 
         }
