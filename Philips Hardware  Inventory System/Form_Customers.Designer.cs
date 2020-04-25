@@ -33,9 +33,9 @@
             this.fname = new System.Windows.Forms.TextBox();
             this.btncus_add = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hardware_dbDataSet = new Philips_Hardware__Inventory_System.hardware_dbDataSet();
+            
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customerTableAdapter = new Philips_Hardware__Inventory_System.hardware_dbDataSetTableAdapters.CustomerTableAdapter();
+            
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,17 +94,17 @@
             // 
             // hardware_dbDataSet
             // 
-            this.hardware_dbDataSet.DataSetName = "hardware_dbDataSet";
-            this.hardware_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hardware_dbDataSet.DataSetName = "hardware_dbDataSet";
+            //this.hardware_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customerBindingSource
             // 
             this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.hardware_dbDataSet;
+            //this.customerBindingSource.DataSource = this.hardware_dbDataSet;
             // 
             // customerTableAdapter
             // 
-            this.customerTableAdapter.ClearBeforeFill = true;
+            //this.customerTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -188,7 +188,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Customers_FormClosed);
             this.Load += new System.EventHandler(this.Form_Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,9 +201,9 @@
         private System.Windows.Forms.TextBox fname;
         private System.Windows.Forms.Button btncus_add;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private hardware_dbDataSet hardware_dbDataSet;
+       // private hardware_dbDataSet hardware_dbDataSet;
         private System.Windows.Forms.BindingSource customerBindingSource;
-        private hardware_dbDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+      //  private hardware_dbDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

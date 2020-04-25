@@ -60,7 +60,7 @@ namespace Philips_Hardware__Inventory_System
         public void setlabel(string username_)
         {
 
-            user_lbl.Text = username_;
+           
 
         }
 
@@ -77,7 +77,15 @@ namespace Philips_Hardware__Inventory_System
 
         private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ops.inventoryForm(this);
+            Form_inventory inven = new Form_inventory();
+
+            inven.MdiParent = this;
+
+            inven.Show();
+           
+
+            
+           
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -87,27 +95,53 @@ namespace Philips_Hardware__Inventory_System
 
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ops.employeeForm(this);
+            Form_Employees Employee = new Form_Employees();
+
+            Employee.MdiParent= this;
+            Employee.Show();
         }
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ops.SupplierForm(this);
+            Form_Suppliers Supplier_Frm = new Form_Suppliers();
+            Supplier_Frm.MdiParent = this;
+            Supplier_Frm.Show();
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ops.customerForm(this);
+            Form_Customers cusform = new Form_Customers();
+
+            cusform.MdiParent = this;
+
+            cusform.Show();
+
+           // ops.customerForm(this);
         }
 
         private void pointOfSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ops.posForm(this);
+            Form_POS pos = new Form_POS();
+            pos.MdiParent = this;
+            pos.Show();
+            //ops.posForm(this);
         }
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ops.ReportsForm(this);
+            Form_Reports Reports_Frm = new Form_Reports();
+            Reports_Frm.MdiParent = this;
+            Reports_Frm.Show();
+        }
+
+        private void detachWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void customerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ops.customerForm(this);
         }
     }
 }

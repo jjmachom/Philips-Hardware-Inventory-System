@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.fname_txt = new System.Windows.Forms.TextBox();
             this.employeedatagrid = new System.Windows.Forms.DataGridView();
-            this.hardware_dbDataSet1 = new Philips_Hardware__Inventory_System.hardware_dbDataSet1();
+           
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeTableAdapter = new Philips_Hardware__Inventory_System.hardware_dbDataSet1TableAdapters.EmployeeTableAdapter();
+           
             this.empidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.user_stat = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.employeedatagrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,17 +87,17 @@
             // 
             // hardware_dbDataSet1
             // 
-            this.hardware_dbDataSet1.DataSetName = "hardware_dbDataSet1";
-            this.hardware_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+          //  this.hardware_dbDataSet1.DataSetName = "hardware_dbDataSet1";
+            //this.hardware_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // employeeBindingSource
             // 
             this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.hardware_dbDataSet1;
+           // this.employeeBindingSource.DataSource = this.hardware_dbDataSet1;
             // 
             // employeeTableAdapter
             // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
+            //this.employeeTableAdapter.ClearBeforeFill = true;
             // 
             // empidDataGridViewTextBoxColumn
             // 
@@ -264,7 +264,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Employees_FormClosed);
             this.Load += new System.EventHandler(this.Form_Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeedatagrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hardware_dbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,9 +275,9 @@
 
         private System.Windows.Forms.TextBox fname_txt;
         private System.Windows.Forms.DataGridView employeedatagrid;
-        private hardware_dbDataSet1 hardware_dbDataSet1;
+      //  private hardware_dbDataSet1 hardware_dbDataSet1;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private hardware_dbDataSet1TableAdapters.EmployeeTableAdapter employeeTableAdapter;
+      //  private hardware_dbDataSet1TableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn empidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;

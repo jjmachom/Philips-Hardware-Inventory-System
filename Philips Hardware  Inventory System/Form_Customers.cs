@@ -12,7 +12,7 @@ namespace Philips_Hardware__Inventory_System
 {
     public partial class Form_Customers : Form
     {
-        private readonly hardware_dbEntities1 hardware_d = new hardware_dbEntities1();
+        //private readonly hardware_dbEntities1 hardware_d = new hardware_dbEntities1();
 
         
         
@@ -50,8 +50,8 @@ namespace Philips_Hardware__Inventory_System
                 customer_data.Last_Name = lname.Text;
                 customer_data.Telephone = tel.Text;
 
-                hardware_d.Customers.Add(customer_data);
-                hardware_d.SaveChanges();
+                //hardware_d.Customers.Add(customer_data);
+                //hardware_d.SaveChanges();
 
 
                 dataGridView1.Refresh();

@@ -4,69 +4,69 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="hardware_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Customer">
-          <Key>
-            <PropertyRef Name="cusId" />
-          </Key>
-          <Property Name="cusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="First Name" Type="varchar" MaxLength="50" />
-          <Property Name="Last Name" Type="varchar" MaxLength="50" />
-          <Property Name="Telephone" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="Employee">
-          <Key>
-            <PropertyRef Name="empid" />
-          </Key>
-          <Property Name="empid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="First Name" Type="varchar" MaxLength="50" />
-          <Property Name="Last Name" Type="varchar" MaxLength="50" />
-          <Property Name="username" Type="varchar" MaxLength="50" />
-          <Property Name="password" Type="nchar" MaxLength="10" />
-          <Property Name="level" Type="nchar" MaxLength="10" />
-          <Property Name="Active" Type="nchar" MaxLength="10" />
-        </EntityType>
-        <EntityType Name="Inventory">
-          <Key>
-            <PropertyRef Name="invenid" />
-          </Key>
-          <Property Name="invenid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="item" Type="varchar" MaxLength="50" />
-          <Property Name="Quality" Type="int" Nullable="false" />
-          <Property Name="supplierid" Type="int" />
-          <Property Name="cost" Type="money" />
-          <Property Name="price" Type="money" />
-        </EntityType>
-        <EntityType Name="Supplier">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Supplier Name" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <Association Name="FK_Inventory_Supplier">
-          <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
-          <End Role="Inventory" Type="Self.Inventory" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Supplier">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Inventory">
-              <PropertyRef Name="invenid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="hardware_dbModelStoreContainer">
-          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Inventory_Supplier" Association="Self.FK_Inventory_Supplier">
-            <End Role="Supplier" EntitySet="Supplier" />
-            <End Role="Inventory" EntitySet="Inventory" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
+    <Schema Namespace="hardware_dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="hardware_dbModelStoreContainer">
+    <EntitySet Name="Customers" EntityType="hardware_dbModel.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="hardware_dbModel.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inventories" EntityType="hardware_dbModel.Store.Inventories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Suppliers" EntityType="hardware_dbModel.Store.Suppliers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Inventory_Supplier" Association="hardware_dbModel.Store.FK_Inventory_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Inventory" EntitySet="Inventories" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="cusId" />
+    </Key>
+    <Property Name="cusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Telephone" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="empid" />
+    </Key>
+    <Property Name="empid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="username" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="password" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="level" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="Active" Type="nchar" Nullable="true" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Inventories">
+    <Key>
+      <PropertyRef Name="invenid" />
+    </Key>
+    <Property Name="invenid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="item" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Quality" Type="int" Nullable="false" />
+    <Property Name="supplierid" Type="int" Nullable="true" />
+    <Property Name="cost" Type="decimal" Nullable="true" Precision="19" Scale="4" />
+    <Property Name="price" Type="decimal" Nullable="true" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier_Name" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Inventory_Supplier">
+    <End Role="Supplier" Type="hardware_dbModel.Store.Suppliers" Multiplicity="1" />
+    <End Role="Inventory" Type="hardware_dbModel.Store.Inventories" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="invenid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="hardware_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -137,54 +137,53 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="hardware_dbModelStoreContainer" CdmEntityContainer="hardware_dbEntities1">
-          <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="hardware_dbModel.Customer">
-              <MappingFragment StoreEntitySet="Customer">
-                <ScalarProperty Name="cusId" ColumnName="cusId" />
-                <ScalarProperty Name="First_Name" ColumnName="First Name" />
-                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
-                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="hardware_dbModel.Employee">
-              <MappingFragment StoreEntitySet="Employee">
-                <ScalarProperty Name="empid" ColumnName="empid" />
-                <ScalarProperty Name="First_Name" ColumnName="First Name" />
-                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="level" ColumnName="level" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Inventories">
-            <EntityTypeMapping TypeName="hardware_dbModel.Inventory">
-              <MappingFragment StoreEntitySet="Inventory">
-                <ScalarProperty Name="invenid" ColumnName="invenid" />
-                <ScalarProperty Name="item" ColumnName="item" />
-                <ScalarProperty Name="Quality" ColumnName="Quality" />
-                <ScalarProperty Name="supplierid" ColumnName="supplierid" />
-                <ScalarProperty Name="cost" ColumnName="cost" />
-                <ScalarProperty Name="price" ColumnName="price" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Suppliers">
-            <EntityTypeMapping TypeName="hardware_dbModel.Supplier">
-              <MappingFragment StoreEntitySet="Supplier">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="Supplier_Name" ColumnName="Supplier Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hardware_dbModelStoreContainer" CdmEntityContainer="hardware_dbEntities1">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IsTypeOf(hardware_dbModel.Customer)">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="cusId" ColumnName="cusId" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="IsTypeOf(hardware_dbModel.Employee)">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventories">
+      <EntityTypeMapping TypeName="IsTypeOf(hardware_dbModel.Inventory)">
+        <MappingFragment StoreEntitySet="Inventories">
+          <ScalarProperty Name="invenid" ColumnName="invenid" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="supplierid" ColumnName="supplierid" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="IsTypeOf(hardware_dbModel.Supplier)">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -198,7 +197,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

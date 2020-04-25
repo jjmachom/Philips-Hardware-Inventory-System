@@ -39,12 +39,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,11 +57,14 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conn.cs" />
     <Compile Include="Customer.cs">
-      <DependentUpon>hardware.tt</DependentUpon>
+      <DependentUpon>hardware_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -67,7 +73,7 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
-      <DependentUpon>hardware.tt</DependentUpon>
+      <DependentUpon>hardware_db.tt</DependentUpon>
     </Compile>
     <Compile Include="formops.cs" />
     <Compile Include="Form_Customers.cs">
@@ -121,22 +127,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hardware.edmx</DependentUpon>
     </Compile>
+    <Compile Include="hardware_db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hardware_db.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="hardware_db.cs" />
-    <Compile Include="hardware_dbDataSet.cs">
-      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="hardware_dbDataSet.Designer.cs">
+    <Compile Include="hardware_db.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+      <DependentUpon>hardware_db.edmx</DependentUpon>
     </Compile>
-    <Compile Include="hardware_dbDataSet1.Designer.cs">
+    <Compile Include="hardware_db1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>hardware_dbDataSet1.xsd</DependentUpon>
+      <DependentUpon>hardware_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs">
-      <DependentUpon>hardware.tt</DependentUpon>
+      <DependentUpon>hardware_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -144,10 +152,25 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Supplier.cs">
-      <DependentUpon>hardware.tt</DependentUpon>
+      <DependentUpon>hardware_db.tt</DependentUpon>
     </Compile>
     <Compile Include="users.cs" />
     <EmbeddedResource Include="Dashboard.resx">
@@ -182,6 +205,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="hardware.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -190,27 +214,19 @@
     <None Include="hardware.edmx.diagram">
       <DependentUpon>hardware.edmx</DependentUpon>
     </None>
-    <None Include="hardware_dbDataSet.xsc">
-      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="hardware_db.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>hardware_db.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="hardware_db.edmx.diagram">
+      <DependentUpon>hardware_db.edmx</DependentUpon>
     </None>
-    <None Include="hardware_dbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>hardware_dbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="hardware_dbDataSet.xss">
-      <DependentUpon>hardware_dbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="hardware_dbDataSet1.xsc">
-      <DependentUpon>hardware_dbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="hardware_dbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>hardware_dbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="hardware_dbDataSet1.xss">
-      <DependentUpon>hardware_dbDataSet1.xsd</DependentUpon>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -235,11 +251,34 @@
       <DependentUpon>hardware.edmx</DependentUpon>
       <LastGenOutput>hardware.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="hardware.edmx.sql" />
     <Content Include="hardware.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>hardware.edmx</DependentUpon>
       <LastGenOutput>hardware.cs</LastGenOutput>
     </Content>
+    <Content Include="hardware_db.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>hardware_db.edmx</DependentUpon>
+      <LastGenOutput>hardware_db.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="hardware_db.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>hardware_db.edmx</DependentUpon>
+      <LastGenOutput>hardware_db1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\bk.png" />
+    <None Include="Resources\logo-master.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

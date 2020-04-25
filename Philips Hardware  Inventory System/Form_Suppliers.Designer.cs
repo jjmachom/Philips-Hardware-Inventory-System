@@ -32,12 +32,14 @@
             // 
             // Form_Suppliers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2133, 1073);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form_Suppliers";
             this.Text = "Form_Suppliers";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Suppliers_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Suppliers_Load);
             this.ResumeLayout(false);
 
         }
