@@ -12,11 +12,11 @@ namespace Philips_Hardware__Inventory_System
 {
     public partial class Form_Employees : Form
     {
-        //hardware_dbEntities1 hardware_d;
+        private readonly HardwareEntities1 hardware_d;
         formops ops = new formops();
         public Form_Employees()
         {
-           // hardware_d = new hardware_dbEntities1();
+           hardware_d = new HardwareEntities1();
             InitializeComponent();
         }
 
@@ -27,11 +27,13 @@ namespace Philips_Hardware__Inventory_System
 
         private void Form_Employees_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hardwareDataSet1.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this.hardwareDataSet1.Employees);
             // TODO: This line of code loads data into the 'hardware_dbDataSet1.Employee' table. You can move, or remove it, as needed.
-           //this.employeeTableAdapter.Fill(this.hardwareDataSet1.Employee);
+            //this.employeeTableAdapter.Fill(this.hardwareDataSet1.Employee);
 
-          
-            
+
+
 
         }
 
@@ -57,10 +59,10 @@ namespace Philips_Hardware__Inventory_System
 
                 var userstats_ = user_stat.SelectedItem.ToString();
                 employees.Active = userstats_;
-               // hardware_d.Employees.Add(employees);
-                //hardware_d.SaveChanges();
+                hardware_d.Employees.Add(employees);
+                hardware_d.SaveChanges();
 
-                //employeeTableAdapter.Fill(hardware_dbDataSet1.Employee);
+                
 
                 MessageBox.Show("Data Successfully Submitted!");
             }
